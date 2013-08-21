@@ -8,6 +8,16 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 
 
+group :test do
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
