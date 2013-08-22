@@ -14,7 +14,6 @@ group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'capybara-webkit'
   gem 'database_cleaner'
 end
 
@@ -47,3 +46,5 @@ gem "slim-rails"
 
 # To use debugger
 # gem 'debugger'
+
+gem 'pry-rails'

@@ -1,9 +1,11 @@
 EventeeeIoioio::Application.routes.draw do
-  get "event/new"
+  # get "event/new"
 
-  get "event/index"
+  # get "event/index"
 
-  post "event/create"
+  # post "event/create"
+
+  resources :event
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

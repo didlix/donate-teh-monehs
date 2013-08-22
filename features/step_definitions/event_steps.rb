@@ -1,5 +1,5 @@
 Given(/^I am on the create events page$/) do
-  visit event_new_path
+  visit new_event_path
 end
 
 Given(/^I enter details about my event$/) do
@@ -17,6 +17,6 @@ When(/^I save the event$/) do
 end
 
 Then(/^I should see a confirmation message$/) do
-  pending
+  page.should have_content('Successfully created product.')
 end
 
