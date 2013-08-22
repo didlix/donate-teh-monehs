@@ -10,4 +10,3 @@ Feature: Events
     And I enter details about my event
     When I save the event
     Then I should see a confirmation message
-    And the event should be saved to my profile

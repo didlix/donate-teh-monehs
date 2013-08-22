@@ -1,19 +1,22 @@
 Given(/^I am on the create events page$/) do
-  visit event_index_path
+  visit event_new_path
 end
 
 Given(/^I enter details about my event$/) do
-  pending # express the regexp above with the code you wish you had
+  fill_in "event_title", with: "Dungeons and Dragons, with Pizza"
+  fill_in "event_description", with: "Step 1: bring pizza from Pizza Lupa
+    Step 2: bring booze
+    Step 3: bring a Dungeon Master
+    Step 4: Lose all your cool friends"
+  fill_in "event_start", with: "2030-12-15 15:00"
+  fill_in "event_end", with: "2030-12-15 21:00"
 end
 
-When(/^I save it$/) do
-  pending # express the regexp above with the code you wish you had
+When(/^I save the event$/) do
+  click_on "event_create"
 end
 
 Then(/^I should see a confirmation message$/) do
-  pending # express the regexp above with the code you wish you had
+  pending
 end
 
-Then(/^the event should be saved to my profile$/) do
-  pending # express the regexp above with the code you wish you had
-end

@@ -10,7 +10,7 @@ gem 'sqlite3'
 
 group :test do
   gem 'cucumber'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'rspec'
   gem 'rspec-rails'
   gem 'capybara'
@@ -31,7 +31,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem "slim"
 gem "slim-rails"
 
 # To use ActiveModel has_secure_password
