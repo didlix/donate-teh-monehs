@@ -1,3 +1,11 @@
-h1 fat
+h1
+  = @event.title
 div.notice
   = flash.notice
+aside
+  time
+    = @event.start
+  time
+    = @event.end
+div
+  = @event.description

@@ -10,3 +10,8 @@ Feature: Events
     And I enter details about my event
     When I save the event
     Then I should see a confirmation message
+
+  Scenario: View Event
+    Given I have created an event
+    When I visit the event
+    Then I should see information about the event

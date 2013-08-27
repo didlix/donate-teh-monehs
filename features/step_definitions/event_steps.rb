@@ -20,3 +20,26 @@ Then(/^I should see a confirmation message$/) do
   page.should have_content('Successfully created product.')
 end
 
+Given(/^I have created an event$/) do
+  event = {
+    title: 'Battlestar Gaming Galacticon',
+    description: 'Are You A Cylon?',
+    start: '2030-12-15 15:00',
+    end: '2030-12-15 21:00'
+  }
+
+  @event = Event.create(event)
+
+  Event.all.count.should eq(1)
+end
+
+When(/^I visit the event$/) do
+  visit event_path(@event)
+end
+
+Then(/^I should see information about the event$/) do
+  page.should have_content('Battlestar Gaming Galacticon')
+  page.should have_content('Are You A Cylon?')
+  page.should have_content('2030-12-15 15:00')
+  page.should have_content('2030-12-15 21:00')
+end
