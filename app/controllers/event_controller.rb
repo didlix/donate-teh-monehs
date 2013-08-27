@@ -8,6 +8,7 @@ class EventController < ApplicationController
     if @event.save
       redirect_to(@event, notice: "Successfully created product." )
     else
+      flash[:alert] = 'Your event details are invalid'
       render "new"
     end
   end

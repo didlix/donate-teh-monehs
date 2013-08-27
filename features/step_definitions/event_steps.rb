@@ -17,7 +17,7 @@ When(/^I save the event$/) do
 end
 
 Then(/^I should see a confirmation message$/) do
-  page.should have_content('Successfully created product.')
+  page.should have_content 'Successfully created product.'
 end
 
 Given(/^I have created an event$/) do
@@ -38,8 +38,19 @@ When(/^I visit the event$/) do
 end
 
 Then(/^I should see information about the event$/) do
-  page.should have_content('Battlestar Gaming Galacticon')
-  page.should have_content('Are You A Cylon?')
-  page.should have_content('2030-12-15 15:00')
-  page.should have_content('2030-12-15 21:00')
+  page.should have_content 'Battlestar Gaming Galacticon'
+  page.should have_content 'Are You A Cylon?'
+  page.should have_content '2030-12-15 15:00'
+  page.should have_content '2030-12-15 21:00'
+end
+
+Given(/^I enter invalid details about my event$/) do
+  fill_in "event_title", with: ""
+  fill_in "event_description", with: ""
+  fill_in "event_start", with: "Next Friday"
+  fill_in "event_end", with: "Two hundred years ago"
+end
+
+Then(/^I should see an error message$/) do
+  page.should have_content 'Your event details are invalid'
 end

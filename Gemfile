@@ -34,3 +34,4 @@ end
 
 gem 'jquery-rails'
 gem "slim-rails"
+gem 'validates_timeliness', '~> 3.0'
