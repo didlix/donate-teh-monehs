@@ -4,7 +4,7 @@ Managing events like a boss!
 
 ## Stability
 
-[![Build Status](https://travis-ci.org/rainbow-unicorn-rangers/eventeeeee.png)](https://travis-ci.org/https://travis-ci.org/rainbow-unicorn-rangers/eventeeeee "Build Status")
+[![Build Status](https://travis-ci.org/rainbow-unicorn-rangers/eventeeeee.png)](https://travis-ci.org/rainbow-unicorn-rangers/eventeeeee "Build Status")
 
 ## TODOs
 1. Fix this readme. It's shit.
